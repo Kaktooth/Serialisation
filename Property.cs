@@ -85,15 +85,20 @@ namespace Serialisation
             geodeticReference.Clear();
         }
         public Description() { }
-        public Description(int waterLevel, SoilType soilType)
+        public Description(int waterLevel, SoilType soilType, List<Point> geo)
         {
             this.waterLevel = waterLevel;
             this.soilType = soilType;
-           
+            geodeticReference = geo;
         }
         public override string ToString()
         {
-            return "ground water level: " + waterLevel + " Soil type: " + soilType;
+            string str = "";
+            foreach (var geo in geodeticReference)
+            {
+                str += geo.ToString() + " ";
+            }
+            return "ground water level: " + waterLevel + " Soil type: " + soilType+" " + str;
         }
     }
     [Serializable]
@@ -109,7 +114,7 @@ namespace Serialisation
         }
         public override string ToString()
         {
-            return Appointment.ToString()+ " " + Environment.NewLine + Owner.ToString() + " " + Environment.NewLine + Description.ToString();
+            return Appointment.ToString() + " " + Environment.NewLine + Owner.ToString() + " " + Environment.NewLine + "Price($): " + Price  + " " + Environment.NewLine + Description.ToString();
         }
 
         public Property() { }
@@ -160,9 +165,9 @@ namespace Serialisation
                 return str;
             
         }
-        public Locality()
+        public Locality(int count)
         {
-            Count++;
+            Count = count;
             serialNumber = Count;
 
         }

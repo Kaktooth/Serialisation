@@ -36,6 +36,7 @@ namespace Serialisation
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -61,14 +62,14 @@ namespace Serialisation
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(262, 83);
+            this.listBox1.Location = new System.Drawing.Point(218, 83);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(234, 212);
+            this.listBox1.Size = new System.Drawing.Size(278, 244);
             this.listBox1.TabIndex = 14;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(56, 155);
+            this.button2.Location = new System.Drawing.Point(56, 207);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 56);
             this.button2.TabIndex = 15;
@@ -78,7 +79,7 @@ namespace Serialisation
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(56, 228);
+            this.button3.Location = new System.Drawing.Point(56, 269);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(125, 56);
             this.button3.TabIndex = 16;
@@ -88,7 +89,7 @@ namespace Serialisation
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(316, 341);
+            this.button4.Location = new System.Drawing.Point(371, 341);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(125, 56);
             this.button4.TabIndex = 17;
@@ -106,11 +107,22 @@ namespace Serialisation
             this.label1.TabIndex = 18;
             this.label1.Text = "Refresh properties if they was added";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(56, 145);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(125, 56);
+            this.button5.TabIndex = 19;
+            this.button5.Text = "Edit Property";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -134,5 +146,6 @@ namespace Serialisation
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button5;
     }
 }

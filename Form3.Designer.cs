@@ -47,9 +47,13 @@ namespace Serialisation
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label8
@@ -67,6 +71,7 @@ namespace Serialisation
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 31;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // listBox1
             // 
@@ -126,6 +131,7 @@ namespace Serialisation
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 24;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label4
             // 
@@ -151,6 +157,7 @@ namespace Serialisation
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 20;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -167,6 +174,7 @@ namespace Serialisation
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 18;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -195,6 +203,7 @@ namespace Serialisation
             this.button2.TabIndex = 34;
             this.button2.Text = "Add Point";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -204,15 +213,7 @@ namespace Serialisation
             this.button3.TabIndex = 35;
             this.button3.Text = "Remove Point";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(317, 128);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 25);
-            this.button4.TabIndex = 36;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -231,14 +232,59 @@ namespace Serialisation
             this.dateTimePicker1.Size = new System.Drawing.Size(157, 22);
             this.dateTimePicker1.TabIndex = 38;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(419, 191);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 39;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(419, 219);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 22);
+            this.textBox6.TabIndex = 40;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(448, 167);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 17);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Point";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(373, 191);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(17, 17);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "X";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(373, 219);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(17, 17);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "Y";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -284,8 +330,12 @@ namespace Serialisation
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
